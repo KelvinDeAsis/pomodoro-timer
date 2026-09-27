@@ -1,0 +1,19 @@
+.game { max-width: 650px; margin: 0 auto; }
+.info { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 20px; }
+.info h3 { margin: 0; font-size: 25px; }
+.info p { font-size: 14px; margin: 2px 0 0; color: var(--muted); }
+.grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.card { aspect-ratio: 1 / 1.2; border-radius: 16px; border: 1px solid var(--line); background: var(--pink); color: var(--text); display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 12px; gap: 2px; box-shadow: 0 3px 0 var(--line); }
+.back { font-family: var(--heading-font); font-size: 35px; opacity: .65; }
+.revealed { background: var(--surface); animation: cardReveal .22s ease-out both; }
+.letter { font-size: 32px; font-family: var(--heading-font); }
+.matched { background: var(--inset); opacity: .75; animation: matchPop .32s ease-out both; }
+.bottom { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 20px; color: var(--muted); font-size: 13px; }
+.feeding { display: flex; align-items: center; justify-content: center; gap: 25px; padding: 10px; min-height: 190px; }
+.feeding img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 5px solid var(--pink); }
+.bubble { padding: 22px; border-radius: 24px 24px 24px 3px; background: var(--inset); font-family: var(--heading-font); font-size: 23px; max-width: 240px; }
+.snacks { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.feedback { text-align: center; min-height: 22px; color: var(--muted); font-size: 14px; }
+@keyframes cardReveal { from { transform: rotateY(70deg) scale(.92); } }
+@keyframes matchPop { 50% { transform: scale(1.06); } }
+@media (max-width: 600px) { .grid { grid-template-columns: repeat(4, 1fr); } .feeding { gap: 12px; } .feeding img { width: 115px; height: 115px; } .bubble { font-size: 20px; padding: 16px; } }

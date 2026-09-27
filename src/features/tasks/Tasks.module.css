@@ -1,0 +1,14 @@
+.tasks { padding: 25px; min-height: 286px; }
+.tasks :global(.muted) { margin: 0 0 18px; font-size: 14px; }
+.form { display: flex; gap: 8px; }
+.form input { min-width: 0; width: 100%; font-size: 14px; }
+.form button { width: 42px; flex-shrink: 0; font-size: 23px; background: var(--pink); }
+.list { padding: 0; margin: 10px 0; list-style: none; max-height: 185px; overflow-y: auto; }
+.list li { display: flex; align-items: center; justify-content: space-between; gap: 5px; padding: 7px 0; border-bottom: 1px dashed var(--line); animation: taskIn .25s ease-out both; }
+.list label { display: flex; gap: 10px; align-items: center; min-width: 0; font-size: 14px; cursor: pointer; }
+.list span { overflow-wrap: anywhere; }
+.done span { text-decoration: line-through; color: var(--muted); animation: taskDone .25s ease-out; }
+.empty { text-align: center; padding: 14px 0 4px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.rule { display: block; width: 80%; border-top: 1px dashed var(--line); margin: 8px auto; }
+@keyframes taskIn { from { opacity: 0; transform: translateX(-6px); } }
+@keyframes taskDone { 50% { transform: scale(.98); } }
