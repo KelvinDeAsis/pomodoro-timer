@@ -7,8 +7,9 @@ A React personal-study app with adjustable Pomodoro sessions, tasks, a pink/crea
 Requires Node.js 22.12+ (tested with 22.19) and npm.
 
 ```powershell
-cd "C:\KELVIN\pomodoro copy"
-npm install
+git clone https://github.com/KelvinDeAsis/pomodoro-timer.git
+cd pomodoro-timer
+npm ci
 npm run dev
 ```
 
